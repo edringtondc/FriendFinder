@@ -1,5 +1,3 @@
-// You should save your application's data inside of app/data/friends.js as an array of objects. 
-//Each of these objects should roughly follow the format below.
 
 // TO DO: 
 //     PHOTOS
@@ -8,7 +6,7 @@
 var friends = [
     {
         "name": "Ross",
-        "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo": "images/ross.gif",
         "scores": [
             5,
             1,
@@ -24,7 +22,7 @@ var friends = [
     }
     , {
         "name": "Rachel",
-        "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo": "images/rachel.gif",
         "scores": [
             3,
             1,
@@ -40,7 +38,7 @@ var friends = [
     },
     {
         "name": "Chandler",
-        "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo": "images/chandler.gif",
         "scores": [
             5,
             5,
@@ -56,7 +54,7 @@ var friends = [
     },
     {
         "name": "Joey",
-        "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo": "images/joey.gif",
         "scores": [
             4,
             4,
@@ -72,7 +70,7 @@ var friends = [
     },
     {
         "name": "Monica",
-        "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo": "images/monica.gif",
         "scores": [
             3,
             3,
@@ -87,7 +85,7 @@ var friends = [
         ]
     }, {
         "name": "Phoebe",
-        "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo": "images/phoebe.gif",
         "scores": [
             2,
             2,
@@ -104,3 +102,7 @@ var friends = [
 
 
 ]
+
+//initialize select form
+
+
