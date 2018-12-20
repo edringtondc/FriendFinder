@@ -1,25 +1,46 @@
-// Your apiRoutes.js file should contain two routes:
 
-// Dependencies
-// =============================================================
-var express = require("express");
-var path = require("path");
 var friends = require("../data/friends.js")
-// Sets up the Express App
-// =============================================================
-var app = express();
-var PORT = process.env.PORT || 3000;
+var answers = [];
+var total = 0;
+var difference;
+var totalArr = [];
+
+function friendCompare(answers) {
+  console.log(`Total score is ${total}`)
+  //closest match - chooses that friend
+var bestMatch
+  for (var j = 0; j < friends.length; j++) {
+    for (var i = 0; i < answers.length; i++) {
+
+        difference = Math.abs(answers[i] - friends[j].scores[i])
+
+        console.log(`difference of index ${i} = ${difference}`)
+        totalArr.push(difference);
 
 
-// Sets up the Express app to handle data parsing
-//middleware
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+    }
 
+}
+  arrTotal(totalArr)
+  console.log(total)
+  // console.log(difference)
+  //variable keeping track of best match
+  //variable keeping track of what the difference was
+  //function is this friend a better match
+//return bestMatch
+var bestMatch = "best Match is "
+return bestMatch + total
+}
 
+function arrTotal(array) {
+  for (var i = 0; i < array.length; i++) {
 
+      total += array[i];
+  }
 
-
+  console.log("totaling array")
+  return total;
+}
 
 
 module.exports = function(app) {
@@ -32,22 +53,14 @@ module.exports = function(app) {
   
 // A POST routes /api/friends. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
 
-//   app.post("/api/friends", function(req, res) {
+  app.post("/api/friends", function(req, res) {
+   var bestMatch = friendCompare(req.body.scores)
+    console.log(req.body)
+    res.json(bestMatch);
 
 
- 
+//need to find the api route
 
-//   });
+  });
 
-  // ---------------------------------------------------------------------------
-  // I added this below code so you could clear out the table while working with the functionality.
-  // Don"t worry about it!
-
-//   app.post("/api/clear", function(req, res) {
-//     // Empty out the arrays of data
-//     tableData.length = [];
-//     waitListData.length = [];
-
-//     res.json({ ok: true });
-//   });
 };
