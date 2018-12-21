@@ -25,15 +25,15 @@ function friendCompare(answers) {
       totalArr.push(compatibilityScore);
 
 
-      if (compatibilityScore <= bestMatch.compatibility){
-         bestMatch.closestMatch = friends[i];
-         bestMatch.compatibility = compatibilityScore;
+      if (compatibilityScore <= bestMatch.compatibility) {
+        bestMatch.closestMatch = friends[i];
+        bestMatch.compatibility = compatibilityScore;
 
-        }
       }
+    }
 
   }
- 
+
   console.log(total)
   console.log(compatibilityScore)
   //variable keeping track of best match

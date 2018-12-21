@@ -26,6 +26,7 @@ $("#submit").on("click", function (event) {
         console.log(response);
         displayFriend(response)
         
+        
     })
     
 });
@@ -35,6 +36,7 @@ function displayFriend(bestMatch){
 
     $('#matchModal').modal();
     $("#modalBody").html(`<div><h3> ${bestMatch.closestMatch.name}`);
-    $("#modalBody").append(`<img src= ${bestMatch.closestMatch.photo}/>`);
+    $("#modalBody").append(`<img src='${bestMatch.closestMatch.photo}'/>`);
+    
 }
 
