@@ -4,19 +4,28 @@
   "description": "Determine the user's most compatible friend using the following as a guide:",
   "main": "app2.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/edringtondc/FriendFinder.git"
   },
-  "author": "",
+  "author": "Elisabeth Edrington",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/edringtondc/FriendFinder/issues"
   },
   "homepage": "https://github.com/edringtondc/FriendFinder#readme",
   "dependencies": {
-    "express": "^4.16.4"
-  }
+    "express": "^4.16.4",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "express",
+    "modal",
+    "survey",
+    "friend"
+  ]
 }
