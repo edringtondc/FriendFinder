@@ -1,7 +1,7 @@
 var friends = [
         {
             "name": "Ross",
-            "photo": "images/ross.gif",
+            "photo": "assets/images/ross.gif",
             "scores": [
                 5,
                 1,
@@ -17,7 +17,7 @@ var friends = [
         }
         , {
             "name": "Rachel",
-            "photo": "images/rachel.gif",
+            "photo": "assets/images/rachel.gif",
             "scores": [
                 3,
                 1,
@@ -33,7 +33,7 @@ var friends = [
         },
         {
             "name": "Chandler",
-            "photo": "images/chandler.gif",
+            "photo": "/assets/images/chandler.gif",
             "scores": [
                 5,
                 5,
@@ -49,7 +49,7 @@ var friends = [
         },
         {
             "name": "Joey",
-            "photo": "images/joey.gif",
+            "photo": "/assets/images/joey.gif",
             "scores": [
                 4,
                 4,
@@ -65,7 +65,7 @@ var friends = [
         },
         {
             "name": "Monica",
-            "photo": "images/monica.gif",
+            "photo": "/assets/images/monica.gif",
             "scores": [
                 3,
                 3,
@@ -80,7 +80,7 @@ var friends = [
             ]
         }, {
             "name": "Phoebe",
-            "photo": "images/phoebe.gif",
+            "photo": "/assets/images/phoebe.gif",
             "scores": [
                 2,
                 2,

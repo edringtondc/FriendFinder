@@ -1,6 +1,8 @@
 console.log("working")
 
-
+$('#matchModal').on('shown.bs.modal', function () {
+    $('#matchModal').trigger('focus')
+  })
 
 
 $("#submit").on("click", function (event) {
@@ -25,14 +27,18 @@ $("#submit").on("click", function (event) {
         data: { name: $("#name-input").val().trim(), photo: $("#pic-link").val().trim(), scores: answers }
     }).then(function (response) {
 
-        //popUpFriend - to display
-        //display .name, disp
-
         console.log(response);
-
+        displayFriend(response)
+        
     })
-
-
-
-
+    
 });
+
+
+function displayFriend(bestMatch){
+
+    $('#matchModal').modal();
+    $("#modalBody").html(`<div><h3> ${bestMatch.closestMatch.name}`);
+    $("#modalBody").append(`<img src= ${bestMatch.closestMatch.photo}/>`);
+}
+

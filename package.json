@@ -1,16 +1,22 @@
 {
-  "name": "app",
+  "name": "friendfinder",
   "version": "1.0.0",
-  "description": "Friend Finder app",
+  "description": "Determine the user's most compatible friend using the following as a guide:",
   "main": "app2.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./app/server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Elisabeth Edrington",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edringtondc/FriendFinder.git"
+  },
+  "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edringtondc/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/edringtondc/FriendFinder#readme",
   "dependencies": {
-    "express": "^4.16.4",
-    "jquery": "^3.3.1"
+    "express": "^4.16.4"
   }
 }
