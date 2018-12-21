@@ -1,9 +1,5 @@
 console.log("working")
 
-$('#matchModal').on('shown.bs.modal', function () {
-    $('#matchModal').trigger('focus')
-  })
-
 
 $("#submit").on("click", function (event) {
     event.preventDefault();

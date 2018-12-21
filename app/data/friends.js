@@ -17,7 +17,7 @@ var friends = [
         }
         , {
             "name": "Rachel",
-            "photo": "assets/images/rachel.gif",
+            "photo": "./assets/images/rachel.gif" ,//"../../assets/images/rachel.jpg", 
             "scores": [
                 3,
                 1,
