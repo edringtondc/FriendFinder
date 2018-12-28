@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-       <link rel="stylesheet" href="/assets/css/style.css"/>
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <title>Friend Finder</title>
 </head>
 
@@ -21,7 +21,7 @@
         </div>
     </div> -->
 
-    
+
 
     <!-- Button trigger modal -->
     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#matchModal">
@@ -29,13 +29,12 @@
     </button> -->
 
     <!-- Modal -->
-    <div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="modal"
-        aria-hidden="true">
+    <div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="matchTitle">Your best match...</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" id="Close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -51,135 +50,147 @@
             </div>
         </div>
     </div>
-
-    <div class="container" id="surveyContainer">
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            
-              <form>
-                <div class="form-group">
-                    <label for="name-input">Name</label>
-                    <input type="text" class="form-control" id="name-input" placeholder="Name">
-                </div>
-                <div class="form-group">
-                    <label for="picture">Link to Picture</label>
-                    <input type="link" class="form-control" id="pic-link" placeholder="link to picture">
-                </div>
-    
-                <div class="form-group">
-                    <label for="answerSelect1">question 1</label>
-                    <select class="form-control" id="answerSelect1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="answerSelect3">Question 2</label>
-                    <select class="form-control" id="answerSelect2">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="answerSelect4">Question 3</label>
-                    <select class="form-control" id="answerSelect3">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="answerSelect4">Question 4</label>
-                    <select class="form-control" id="answerSelect4">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="answerSelect5">Question 5</label>
-                    <select class="form-control" id="answerSelect5">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="answerSelect6">Question 6</label>
-                    <select class="form-control" id="answerSelect6">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="answerSelect7">Question 7</label>
-                    <select class="form-control" id="answerSelect7">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="answerSelect8">Question 8</label>
-                    <select class="form-control" id="answerSelect8">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="answerSelect9">Question 9</label>
-                    <select class="form-control" id="answerSelect9">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-    
-                </div>
-                <div class="form-group">
-                    <label for="answerSelect10">Question 10</label>
-                    <select class="form-control" id="answerSelect10">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-    
-                </div>
-            </form>
-            <button type="button" class="btn btn-secondary" id="submit">Submit</button>
-            
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+<!-- container d-flex col-lg-12 offset-4 -->
+    <div class="container d-flex flex-column card p-5" id="mainWrapper">
+        <div class="text-align-center">
+            <h3>For each statement below, choose a number between 1-6 depending on how much the statement applies to you.</h3>
+            <p>1 = Strongly Disagree, 6 = Strongly Agree</p>
+        </div>
+        <form class="">
+            <div class="form-group row">
+                <label for="name-input">Name</label>
+                <input type="text" class="form-control" id="name-input" placeholder="Name">
             </div>
-          </div>
+            <div class="form-group row">
+                <label for="picture">Link to Picture</label>
+                <input type="link" class="form-control" id="pic-link" placeholder="link to picture">
+            </div>
+
+            <div class="form-group row">
+                <label for="answerSelect1">Your friends would generally describe you as a pushover.</label>
+                <select class="form-control" id="answerSelect1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+            </div>
+            <div class="form-group row">
+                <label for="answerSelect3">You are more at ease in a clean environment.</label>
+                <select class="form-control" id="answerSelect2">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+            </div>
+            <div class="form-group row">
+                <label for="answerSelect4">You are more comfortable in a relationship than not.</label>
+                <select class="form-control" id="answerSelect3">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+            </div>
+            <div class="form-group row">
+                <label for="answerSelect4">You would do anything to protect your favorite sandwich.</label>
+                <select class="form-control" id="answerSelect4">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+            </div>
+            <div class="form-group row">
+                <label for="answerSelect5">Animals are friends, not food.</label>
+                <select class="form-control" id="answerSelect5">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+            </div>
+            <div class="form-group row">
+                <label for="answerSelect6">Thanksgiving brings you nothing but bad memories.</label>
+                <select class="form-control" id="answerSelect6">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+            </div>
+            <div class="form-group row">
+                <label for="answerSelect7">I have my dad's credit card memorized.</label>
+                <select class="form-control" id="answerSelect7">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+            </div>
+            <div class="form-group row">
+                <label for="answerSelect8">You are unreasonably competitive.</label>
+                <select class="form-control" id="answerSelect8">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+            </div>
+            <div class="form-group row">
+                <label for="answerSelect9">Most of your comments are sarcastic.</label>
+                <select class="form-control" id="answerSelect9">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+
+            </div>
+            <div class="form-group row">
+                <label for="answerSelect10">You self-describe as flaky.</label>
+                <select class="form-control" id="answerSelect10">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+
+            </div>
+
+            <div class="row col-12">
+                <button type="button" class="btn btn-secondary" id="submit">Submit</button>
         
-       
+            </div>
+        </form>
+
     </div>
+
+    <div class="container d-flex flex-column card p-5">
+        Recent Matches! 
+    </div>
+
 
     <footer class="footer">
         <div class="container text-align-center">
@@ -187,11 +198,6 @@
 
         </div>
     </footer>
-
-
-
-
-
 
 
     <!-- Optional JavaScript -->
@@ -202,7 +208,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-        <script src="assets/js/app2.js"></script>
+    <script src="assets/js/app2.js"></script>
 
 
 </body>

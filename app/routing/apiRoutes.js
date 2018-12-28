@@ -10,8 +10,9 @@ function friendCompare(answers) {
   //closest match - chooses that friend
   var bestMatch = {
     closestMatch: {},
-    compatibility: 100
+    compatibility: 10000
   }
+  console.log("in friend compare: " + bestMatch.compatibility)
 
   for (var i = 0; i < friends.length; i++) {
 

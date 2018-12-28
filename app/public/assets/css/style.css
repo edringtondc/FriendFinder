@@ -1,1 +1,20 @@
+body { 
+    background: url(../images/friends_hed.jpg) no-repeat center center fixed; 
+    background-color: red;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 
+/* #surveryCard {
+    width: 100%
+} */
+
+.friendPic {
+    width: 450px;
+}
+
+#mainWrapper{
+    background-color: rgba(245, 245, 245, 0.6);
+}

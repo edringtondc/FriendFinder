@@ -28,15 +28,33 @@ $("#submit").on("click", function (event) {
         
         
     })
+
+    var recentMatch = {
+        name: $("#name-input").val().trim(), 
+        photo: $("#pic-link").val().trim(), 
+        match: response 
+
+    }
+    console.log(recentMatch)
     
 });
+
+$("#close").on("click", function (event) {
+    event.preventDefault();
+ 
+    console.log("close")
+});
+
+
 
 
 function displayFriend(bestMatch){
 
+    console.log("display", bestMatch);
     $('#matchModal').modal();
     $("#modalBody").html(`<div><h3> ${bestMatch.closestMatch.name}`);
-    $("#modalBody").append(`<img src='${bestMatch.closestMatch.photo}'/>`);
+    $("#modalBody").append(`<img src='${bestMatch.closestMatch.photo}'class='friendPic'/>`);
+
     
 }
 
