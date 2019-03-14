@@ -18,3 +18,12 @@ body {
 #mainWrapper{
     background-color: rgba(245, 245, 245, 0.6);
 }
+
+.footer{
+    color: whitesmoke;
+}
+
+.recent-pic{
+    width: 100px;
+    height: 100px;
+}

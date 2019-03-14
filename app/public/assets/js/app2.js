@@ -5,6 +5,7 @@ $("#submit").on("click", function (event) {
     event.preventDefault();
     answers = []
 
+  
     // input from the text box, into the array and re-render buttons
     //get data from each select
     for (var i = 1; i < 11; i++) {
@@ -14,6 +15,7 @@ $("#submit").on("click", function (event) {
         answers.push(parseInt(score));
 
     }
+
     console.log(answers)
 
     //sends info to the server
@@ -24,18 +26,21 @@ $("#submit").on("click", function (event) {
     }).then(function (response) {
 
         console.log(response);
+       
+        
+        
+        var recentMatch = {
+            name: $("#name-input").val().trim(), 
+            photo: $("#pic-link").val().trim(), 
+            match: response 
+    
+        }
+        addRecent(recentMatch)
         displayFriend(response)
-        
-        
+        console.log("recent Match " + recentMatch.name + " " + recentMatch.photo, response)
     })
 
-    var recentMatch = {
-        name: $("#name-input").val().trim(), 
-        photo: $("#pic-link").val().trim(), 
-        match: response 
-
-    }
-    console.log(recentMatch)
+  
     
 });
 
@@ -45,7 +50,12 @@ $("#close").on("click", function (event) {
     console.log("close")
 });
 
+function addRecent(recentMatch){
+    
+    $("#recent-match").append(`<h3> ${recentMatch.name}'s best match is ${recentMatch.match.closestMatch.name}!</h3>`)
+    $("#recent-match").append(`<img class="recent-pic" src='${recentMatch.photo}' alt="recent match"/>`)
 
+}
 
 
 function displayFriend(bestMatch){
