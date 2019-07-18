@@ -14,9 +14,10 @@ $("#submit").on("click", function (event) {
         //push number to an array
         answers.push(parseInt(score));
 
+
     }
 
-    console.log(answers)
+    console.log("user anwers", answers)
 
     //sends info to the server
     $.ajax({
@@ -37,7 +38,7 @@ $("#submit").on("click", function (event) {
         }
         addRecent(recentMatch)
         displayFriend(response)
-        console.log("recent Match " + recentMatch.name + " " + recentMatch.photo, response)
+        console.log("recent Match " , recentMatch.match, recentMatch.name)
     })
 
   
@@ -52,7 +53,7 @@ $("#close").on("click", function (event) {
 
 function addRecent(recentMatch){
     
-    $("#recent-match").append(`<h3> ${recentMatch.name}'s best match is ${recentMatch.match.closestMatch.name}!</h3>`)
+    $("#recent-match").append(`<h3> ${recentMatch.name}'s best match is ${recentMatch.match.name}!</h3>`)
     $("#recent-match").append(`<img class="recent-pic" src='${recentMatch.photo}' alt="recent match"/>`)
 
 }
@@ -62,8 +63,8 @@ function displayFriend(bestMatch){
 
     console.log("display", bestMatch);
     $('#matchModal').modal();
-    $("#modalBody").html(`<div><h3> ${bestMatch.closestMatch.name}`);
-    $("#modalBody").append(`<img src='${bestMatch.closestMatch.photo}'class='friendPic'/>`);
+    $("#modalBody").html(`<div><h3> ${bestMatch.name}`);
+    $("#modalBody").append(`<img src='${bestMatch.photo}'class='friendPic'/>`);
 
     
 }
