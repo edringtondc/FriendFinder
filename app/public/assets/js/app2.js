@@ -17,7 +17,7 @@ $("#submit").on("click", function (event) {
 
     }
 
-    console.log("user anwers", answers)
+    console.log("user answers", answers)
 
     //sends info to the server
     $.ajax({
