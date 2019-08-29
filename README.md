@@ -6,7 +6,7 @@ Answer the questions, using the dropdown options, and then the app will score th
 
 ## Overview
 
-Full stack based web applicaiton that takes in simple user data to simulate a dating application. Express is used to handle routing. 
+Full stack based web application that takes in simple user data to simulate a dating application. Express is used to handle routing. 
 
 ## Live Site
 [See it here!](https://desolate-dawn-37026.herokuapp.com/)
